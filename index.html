@@ -5,63 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://sites.google.com/site/kadnavcdn/home/styles.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <title>Document</title>
+  <title>Git Profile Scanner</title>
 </head>
 <body>
-  
-  <!-- Navbar start -->
+  <div class="page-container">
+    <!-- Navbar start -->
 
-  <header class="kad-header">
-    <div class="kad-mobile-container">
-      <div class="kad-header-logo">
-        <a class="kad-link" href="#" title="kadnavbar">Github Profile Scanner</a>
+    <header class="kad-header">
+      <div class="kad-mobile-container">
+        <div class="kad-header-logo">
+          <a class="kad-link" href="#" title="kadnavbar">Git Profile Scanner</a>
+        </div>
       </div>
-      <div class="kad-menu-button">
-        <div class="kad-menu-bar kad-menu-bar-one"></div>
-        <div class="kad-menu-bar kad-menu-bar-two"></div>
-        <div class="kad-menu-bar kad-menu-bar-three"></div>
+    </header>
+
+    <!-- Navbar end -->
+
+    <!-- Main body start -->
+
+    <section id="form-box">
+      <div class="form-container">
+        <h1>Lookup Github User Profiles</h1>
+        <form class="search-form">
+            <input type="text" name="search-user" class="search-user" placeholder="Enter a username to search" autocomplete="off">
+        </form>
       </div>
+    </section>
+
+    <div class="alert-container">
+      <!-- Alert Inserted Here -->
     </div>
-    <nav class="kad-nav">
-      <ul class="kad-nav-list">
-        <li class="kad-nav-list-item"><a class="kad-link kad-list-link" href="#">Home</a></li>
-        <li class="kad-nav-list-item"><a class="kad-link kad-list-link" href="#">About</a></li>
-        <li class="kad-nav-list-item"><a class="kad-link kad-list-link" href="#">Contact</a></li>
-        <li class="kad-nav-list-item"><a class="kad-link kad-list-link" href="#">Support</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Navbar end -->
-
-  <!-- Main body start -->
-
-  <section id="form-box">
-    <div class="form-container">
-      <h1>Lookup Github User Profiles</h1>
-      <form class="search-form">
-          <input type="text" name="search-user" class="search-user" placeholder="Enter a username to search">
-      </form>
+    <div class="output-data">
+      <div class="empty"><i class="fab fa-github fa-7x"></i><br><p>Scan Github User Profiles</p></div>
+      <!-- Dynamic content generated here -->
     </div>
-  </section>
 
-  <div class="alert-container">
-    <!-- Alert Inserted Here -->
+    <!-- Main body end -->
+
+    <footer>
+      <div class="footer-text">
+        <p>Git Profile Scanner  &copy 2020</p>
+      </div>
+    </footer>
   </div>
-
-  <div class="output-data">
-    <!-- Dynamic content generated here -->
-  </div>
-
-  <!-- Main body end -->
-
-  <footer>
-    <div class="footer-text">
-      <p>Github Profile Scanner &copy 2020</p>
-    </div>
-  </footer>
-
-  <script src="https://sites.google.com/site/kadnavcdn/home/script.js"></script>
+  <script src="https://kit.fontawesome.com/87ac9dcbe8.js" crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

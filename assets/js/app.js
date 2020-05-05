@@ -28,6 +28,7 @@ class Ui {
   constructor() {
     this.input = document.querySelector('.search-user');
     this.output = document.querySelector('.output-data');
+    this.alertContainer = document.querySelector('.alert-container');
   }
 
   showProfile(user) {
@@ -89,18 +90,22 @@ class Ui {
   };
 
   clearScreen() {
-    this.output.innerHTML = '';
+    this.output.innerHTML = '<div class="empty"><i class="fab fa-github fa-7x"></i><br><p>Scan Github User Profiles</p></div>';
   };
 
   showAlert(message) {
-    const alertContainer = document.querySelector('.alert-container');
-    alertContainer.innerHTML = `<div class="alert"><p class="alert-message">User ${message}</p></div>`;
-    alertContainer.style.display = 'flex';
+    // const alertContainer = document.querySelector('.alert-container');
+    this.alertContainer.innerHTML = `<div class="alert"><p class="alert-message">User ${message}</p></div>`;
+    this.alertContainer.style.display = 'flex';
     setTimeout(() => {
-      alertContainer.innerHTML = '';
-      alertContainer.style.display = 'none';
+      this.alertContainer.innerHTML = '';
+      this.alertContainer.style.display = 'none';
     }, 3000);
    
+  }
+
+  removeAlert() {
+    this.alertContainer.style.display = 'none';
   }
 
 };
@@ -121,6 +126,7 @@ ui.input.addEventListener('keyup', (e) => {
         console.clear();
         ui.showAlert(profile.data.message);
       } else {
+        ui.removeAlert();
         ui.showProfile(profile.data);
         ui.showRepos(profile.repoData);
       }
