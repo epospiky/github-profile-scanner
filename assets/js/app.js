@@ -90,6 +90,17 @@ class Ui {
 
   clearScreen() {
     this.output.innerHTML = '';
+  };
+
+  showAlert(message) {
+    const alertContainer = document.querySelector('.alert-container');
+    alertContainer.innerHTML = `<div class="alert"><p class="alert-message">User ${message}</p></div>`;
+    alertContainer.style.display = 'flex';
+    setTimeout(() => {
+      alertContainer.innerHTML = '';
+      alertContainer.style.display = 'none';
+    }, 3000);
+   
   }
 
 };
@@ -106,11 +117,19 @@ ui.input.addEventListener('keyup', (e) => {
   if(e.target.value !== '') {
     github.getData(e.target.value)
     .then(profile => {
-      ui.showProfile(profile.data);
-      ui.showRepos(profile.repoData)
+      if (profile.data.message) {
+        console.clear();
+        ui.showAlert(profile.data.message);
+      } else {
+        ui.showProfile(profile.data);
+        ui.showRepos(profile.repoData);
+      }
+    })
+    .catch(err => {
+      console.log(err);
     });
   } else {
     ui.clearScreen();
-  }
+  };
 
 })
