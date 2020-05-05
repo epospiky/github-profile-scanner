@@ -1,0 +1,236 @@
+/*----------- MAIN STYLING ----------*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.kad-header {
+  padding: 1.5% 7%;
+}
+
+@media (min-width: 983px) {
+  .kad-nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 7%;
+  }
+}
+
+@media (max-width: 982px) {
+  .kad-header {
+    display: block;
+    padding: 0px;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: stretch;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+/*----------- FORM STYLING ----------*/
+
+#form-box {
+  padding: 2% 7% 1%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0 0 4px 1px lightgray;
+  width: 100%;
+  padding: 2% 3%;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-user {
+  border: 1px solid lightgrey;
+  padding: 0.8rem;
+  border-radius: 3px;
+}
+
+
+/*----------- PROFILE STYLING ----------*/
+
+#user-box {
+  display: flex;
+  padding: 1% 7% 1%;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0 0 4px 1px lightgray;
+  padding: 2% 3%;
+  position: relative;
+}
+
+.profile-container h2 {
+  margin-top: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.profile-box {
+  display: flex;
+  width: 100%;
+  /* border-bottom: 1px solid lightgrey;
+  box-shadow: 0 0 4px 1px lightgray;
+  padding: 2% 3%; */
+  position: relative;
+}
+
+.profile-img-box {
+  display: flex;
+}
+
+.details-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.profile-img {
+  max-width: 100%;
+  border-radius: 5%;
+  width: 200px;
+  height: auto;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.basic-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.info-list li {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 5px;
+  margin-top: auto;
+}
+
+/*-----------REPO STYLING ----------*/
+
+#repo-box {
+  display: flex;
+  padding: 1% 7% 1%;
+}
+
+.repo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0 0 4px 1px lightgray;
+  padding: 2% 3%;
+  position: relative;
+}
+
+.repo-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 0 10px 5px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.repo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0 0;
+}
+
+.repo-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  padding: 0 10px 5px;
+}
+
+
+/*----------- BADGE STYLING ----------*/
+
+.badge {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 2px;
+  border-radius: 5px;
+}
+
+.badge p {
+  color: white;
+  padding: 2px 5px;
+  margin: 0;
+}
+
+.green-badge {
+  background-color: teal;
+  border: 1px solid teal;
+}
+
+.blue-badge {
+  background-color: rgb(54, 38, 148);
+  border: 1px solid rgb(54, 38, 148);
+}
+
+.orange-badge {
+  background-color: rgb(219, 151, 23);
+  border: 1px solid rgb(219, 151, 23);
+}
+
+.red-badge {
+  background-color: rgba(214, 2, 2, 0.849);
+  border: 1px solid rgba(214, 2, 2, 0.849);
+}
+
+.repo-badges {
+  display: flex
+}
+
+/*----------- FOOTER STYLING ----------*/
+
+footer {
+  text-align: center;
+}
