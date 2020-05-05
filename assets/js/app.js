@@ -65,17 +65,13 @@ class Ui {
   showRepos(repos) {
     const section = document.createElement('section');
     section.id = 'repo-box'
-    console.log(section);
     const div = document.createElement('div');
     div.className = 'repo-container';
-    console.log(div);
     const h2 = document.createElement('h2');
     h2.className = 'repo-heading';
     h2.innerText = 'Latest Repos'
-    console.log(h2);
     const ul = document.createElement('ul');
     ul.className = 'repo-list'
-    console.log(ul);
     repos.forEach(repo => {
       ul.innerHTML += 
       `
@@ -86,14 +82,9 @@ class Ui {
       </span></li>
       `
     });
-    console.log(ul);
     div.appendChild(h2);
-    console.log(div);
     div.appendChild(ul);
-    console.log(div);
     section.appendChild(div);
-    console.log(section);
-
     this.output.appendChild(section);
   };
 
