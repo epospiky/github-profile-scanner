@@ -3,8 +3,8 @@
 
 class Github {
   constructor() {
-    this.client_id =  'Iv1.8486322ce3aa58f7';
-    this.client_secret = '89685cdd26da4554750558f944dda93562343743';
+    this.client_id =  '1f2eba3956892c926572';
+    this.client_secret = '94525340e776a5c0079d2c4565180faa8f141027';
     this.repo_count = 5;
     this.sort_repos = 'created: asc';
   }
