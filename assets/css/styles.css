@@ -87,8 +87,6 @@ a {
   justify-content: center;
   flex-direction: column;
   align-items: stretch;
-  /* border-bottom: 1px solid lightgrey; */
-  /* box-shadow: 0 0 4px 1px lightgray; */
   width: 100%;
   padding: 2% 3%;
 }
@@ -135,9 +133,6 @@ a {
 .profile-box {
   display: flex;
   width: 100%;
-  /* border-bottom: 1px solid lightgrey;
-  box-shadow: 0 0 4px 1px lightgray;
-  padding: 2% 3%; */
   position: relative;
 }
 
@@ -319,15 +314,6 @@ footer p {
   #form-box, #user-box, #repo-box, .alert-container {
     padding: 2% 3%;
   }
-
-  #form-box {
-    padding-top: 7%;
-  }
-
-  /* #form-box h1 {
-    text-align: center;
-    color: #5b5c63;
-  } */
 
   .form-container, .profile-container, .repo-container {
     border-bottom: none;
