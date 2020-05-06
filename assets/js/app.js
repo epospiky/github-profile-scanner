@@ -7,7 +7,7 @@ class Github {
     this.client_secret = '94525340e776a5c0079d2c4565180faa8f141027';
     this.repo_count = 5;
     this.sort_repos = 'created: asc';
-  }
+  };
 
   async getData(user) {
     const res = await fetch(`https://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`);
@@ -17,9 +17,9 @@ class Github {
     return {
       data: data,
       repoData: repoData
-    } 
-  }
-}
+    };
+  };
+};
 
 
 //create ui object
@@ -32,6 +32,11 @@ class Ui {
   }
 
   showProfile(user) {
+    const d = new Date(`${user.created_at.split('T')[0]}`);
+    const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+    const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
+    const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+
     this.output.innerHTML = 
       `
       <section id="user-box">
@@ -53,7 +58,7 @@ class Ui {
                   <li><b>Full Name: </b>${user.name}</li>
                   <li><b>Website/blog: </b><a href="${user.blog}">${user.blog}</a></li>
                   <li><b>Location: </b>${user.location}</li>
-                  <li><b>Joined: </b>${user.created_at.split('T')[0]}</li>
+                  <li><b>Joined: </b>${day} ${month} ${year}</li>
                 </ul>
               </div>
             </div>
@@ -61,18 +66,18 @@ class Ui {
         </div>
       </section>
       `
-  }
+  };
 
   showRepos(repos) {
     const section = document.createElement('section');
-    section.id = 'repo-box'
+    section.id = 'repo-box';
     const div = document.createElement('div');
     div.className = 'repo-container';
     const h2 = document.createElement('h2');
     h2.className = 'repo-heading';
     h2.innerText = 'Latest Repos'
     const ul = document.createElement('ul');
-    ul.className = 'repo-list'
+    ul.className = 'repo-list';
     repos.forEach(repo => {
       ul.innerHTML += 
       `
@@ -102,11 +107,11 @@ class Ui {
       this.alertContainer.style.display = 'none';
     }, 3000);
    
-  }
+  };
 
   removeAlert() {
     this.alertContainer.style.display = 'none';
-  }
+  };
 
 };
 
@@ -123,7 +128,6 @@ ui.input.addEventListener('keyup', (e) => {
     github.getData(e.target.value)
     .then(profile => {
       if (profile.data.message) {
-        console.clear();
         ui.showAlert(profile.data.message);
       } else {
         ui.removeAlert();
@@ -132,10 +136,10 @@ ui.input.addEventListener('keyup', (e) => {
       }
     })
     .catch(err => {
-      console.log(err);
+      ui.showAlert(err);
     });
   } else {
     ui.clearScreen();
   };
 
-})
+});
