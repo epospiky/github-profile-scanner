@@ -53,7 +53,7 @@ class Ui {
                   <li><b>Full Name: </b>${user.name}</li>
                   <li><b>Website/blog: </b><a href="${user.blog}">${user.blog}</a></li>
                   <li><b>Location: </b>${user.location}</li>
-                  <li><b>Joined: </b>${user.created_at}</li>
+                  <li><b>Joined: </b>${user.created_at.split('T')[0]}</li>
                 </ul>
               </div>
             </div>
